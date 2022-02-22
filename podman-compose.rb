@@ -1,5 +1,5 @@
 class PodmanCompose < Formula
-  desc "A tool that runs multicontainer Podman applications via YAML instructions"
+  desc "Tool for managing multicontainer Podman applications via YAML files"
   homepage "https://aramean.github.io/go-podman-compose"
   url "https://github.com/aramean/go-podman-compose/archive/v1.0.0.tar.gz"
   version "1.0.0"
@@ -11,7 +11,6 @@ class PodmanCompose < Formula
   def install
     ENV["GOPATH"] = buildpath
     ENV["GO111MODULE"] = "on"
-    ENV["GOFLAGS"] = "-mod=vendor"
     ENV["PATH"] = "#{ENV["PATH"]}:#{buildpath}/bin"
     file = "podman-compose"
     source = "src/github.com/aramean/go-podman-compose"
